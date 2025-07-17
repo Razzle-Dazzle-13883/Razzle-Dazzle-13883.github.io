@@ -12,6 +12,31 @@
     <link rel="icon" type="image/x-icon" href="images/razzledazzlelogo.png" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      a.body-link:link {
+        color: hotpink;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a.body-link:visited {
+        color: palevioletred;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a.body-link:hover {
+        color: plum;
+        background-color: transparent;
+        text-decoration: bold;
+      }
+
+      a.body-link:active {
+        color: palevioletred;
+        background-color: transparent;
+        text-decoration: bold;
+      }
+    </style>
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#171214] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
@@ -46,7 +71,14 @@
                 ></div>
               </div>
             </div>
-            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Our Robots</p></div>
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Our Robots</p>
+            <p class="text-[#b79fa8] text-sm font-normal leading-normal">We CAD our designs beforehand with Onshape, using the Purple Gears Onshape Parts Library. You can get the library here: 
+              <a class="body-link" href="https://www.reddit.com/r/FTC/comments/g3qaaf/ptcapproved_ftc_onshape_parts_library/">Visit Onshape Parts Library!</a>
+            </p>
+            </div>
+             <div class="pb-3">
+              <div class="flex border-b border-[#513d45] px-4 gap-8">
+              </div>
             <div class="p-4 @container">
               <div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-[#261d20]">
                 <div
@@ -104,7 +136,7 @@
                 </div>
               </div>
             </div>
-                        <footer class="flex justify-center">
+          <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap justify-center gap-4">
