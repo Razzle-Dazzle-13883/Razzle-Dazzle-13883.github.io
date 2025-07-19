@@ -39,10 +39,10 @@
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
-              <div class="@[480px]:px-4 @[480px]:py-3">
+              <div class="@[350px]:p-4">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#171214] @[480px]:rounded-xl min-h-[218px]"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLKx6zHKj_8vJ4DsnTVf2JLp5CybP91JP6mB7Zj2RPf_RzLcxUq_-ovD8rm5_Gc8sf3PSkqY0LCTWfQMXowhaBGnFlcIciGSooM_FE7f14acdIUP_GCgs0wkVWUG6vmt86s60M356gQC3Gc-rOgePI_Yf2iIY50m5nOu_y02ajjq7E6sukD6W4SBGZq9KkuTJbHU_RCLD-5tFrJWRnxAfPZHhaAWPiNAzUenWUse14P6SYrEFhe5JEQwJma_vdP18Uf9Me_fNzNn0b");'
+                  class="flex min-h-[350px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[350px]:gap-8 @[350px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("images/contactbanner.jpg");'
                 ></div>
               </div>
             </div>
@@ -55,15 +55,15 @@
                 </p>
               </div>
             </div>
+            <div class="pb-3">
+              <div class="flex border-b border-[#513d45] px-4 gap-8">
+              </div>
+            </div>
             <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">General Inquiries</h3>
             <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">For general questions about our team, events, or outreach programs, please contact us at:</p>
             <div class="flex items-center gap-4 bg-[#171214] px-4 min-h-14 justify-between">
               <p class="text-white text-base font-normal leading-normal flex-1 truncate">Email</p>
-              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">team@example.com</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-[#171214] px-4 min-h-14 justify-between">
-              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Phone</p>
-              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">(555) 123-4567</p></div>
+              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">​razzledazzle13883@gmail.com​</p></div>
             </div>
             <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Sponsorship Opportunities</h3>
             <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
@@ -71,17 +71,17 @@
             </p>
             <div class="flex items-center gap-4 bg-[#171214] px-4 min-h-14 justify-between">
               <p class="text-white text-base font-normal leading-normal flex-1 truncate">Email</p>
-              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">sponsors@example.com</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-[#171214] px-4 min-h-14 justify-between">
-              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Phone</p>
-              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">(555) 987-6543</p></div>
+              <div class="shrink-0"><p class="text-white text-base font-normal leading-normal">​razzledazzle13883@gmail.com​</p></div>
             </div>
             <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Contact Form</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="f3b1e124-5f45-4025-b2ce-bdbeb938022c">
+               <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-white text-base font-medium leading-normal pb-2">Name</p>
-                <input
+                <input name="name" required
                   placeholder="Your Name"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#513d45] bg-[#261d20] focus:border-[#513d45] h-14 placeholder:text-[#b79fa8] p-[15px] text-base font-normal leading-normal"
                   value=""
@@ -91,7 +91,7 @@
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-white text-base font-medium leading-normal pb-2">Email</p>
-                <input
+                <input name="email" required
                   placeholder="Your Email"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#513d45] bg-[#261d20] focus:border-[#513d45] h-14 placeholder:text-[#b79fa8] p-[15px] text-base font-normal leading-normal"
                   value=""
@@ -100,31 +100,22 @@
             </div>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-white text-base font-medium leading-normal pb-2">Subject</p>
-                <input
-                  placeholder="Subject"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#513d45] bg-[#261d20] focus:border-[#513d45] h-14 placeholder:text-[#b79fa8] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-white text-base font-medium leading-normal pb-2">Message</p>
-                <textarea
+                <textarea name="message" required
                   placeholder="Your Message"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#513d45] bg-[#261d20] focus:border-[#513d45] min-h-36 placeholder:text-[#b79fa8] p-[15px] text-base font-normal leading-normal"
                 ></textarea>
               </label>
             </div>
             <div class="flex px-4 py-3 justify-end">
-              <button
+              <button type="submit" 
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#db3d7a] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Send Message</span>
               </button>
             </div>
-                <footer class="flex justify-center">
+            </form>
+        <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap justify-center gap-4">
