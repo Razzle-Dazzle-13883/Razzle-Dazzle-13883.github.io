@@ -23,6 +23,7 @@ export default function Footer() {
                             href="https://www.instagram.com/ftc13883/?hl=en"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Instagram"
                             whileHover={{ scale: 1.2, rotate: 5 }}
                             whileTap={{ scale: 0.9 }}
                             className="text-[#b79fa8] hover:text-[#db3d7a] transition-colors"
@@ -35,6 +36,7 @@ export default function Footer() {
                             href="https://x.com/ftc13883"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Twitter (X)"
                             whileHover={{ scale: 1.2, rotate: -5 }}
                             whileTap={{ scale: 0.9 }}
                             className="text-[#b79fa8] hover:text-[#db3d7a] transition-colors"

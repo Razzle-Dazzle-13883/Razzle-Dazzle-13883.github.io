@@ -42,16 +42,16 @@ export function ParticleField() {
         };
         window.addEventListener('resize', handleResize);
 
-        // Much fewer particles - only 25 for subtle effect
-        const particleCount = 25;
+        // More particles for better visibility
+        const particleCount = 50;
         for (let i = 0; i < particleCount; i++) {
             particlesRef.current.push({
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 vx: (Math.random() - 0.5) * 0.3,
                 vy: (Math.random() - 0.5) * 0.3,
-                size: Math.random() * 2 + 1,
-                alpha: Math.random() * 0.3 + 0.1,
+                size: Math.random() * 3 + 1, // Slightly larger: 1-4px
+                alpha: Math.random() * 0.4 + 0.15, // More visible: 0.15-0.55
             });
         }
 

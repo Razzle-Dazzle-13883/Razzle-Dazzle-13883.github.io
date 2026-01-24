@@ -20,7 +20,7 @@ export default function Home() {
               priority
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 1200px"
-              quality={85}
+              quality={75}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#0d0a0b]/95 via-[#0d0a0b]/70 to-[#0d0a0b]/95" />
 
