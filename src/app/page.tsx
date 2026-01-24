@@ -145,11 +145,11 @@ export default function Home() {
                     Common Roots calls to mind the unique journeys and contributions of the many diverse communities across Asian and Pacific Islander diasporas. We are the only robotics team invited to spread the idea of STEM and FIRST to all visitors of all ages.
                   </p>
                 </div>
-                <div className="md:w-1/2 relative overflow-hidden min-h-[300px]">
+                <div className="md:w-1/2 relative overflow-hidden">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
-                    className="h-full w-full relative"
+                    className="h-64 md:h-full min-h-[300px] w-full relative"
                   >
                     <Image
                       src="/images/commonroots1.jpg"
