@@ -145,17 +145,20 @@ export default function Home() {
                     Common Roots calls to mind the unique journeys and contributions of the many diverse communities across Asian and Pacific Islander diasporas. We are the only robotics team invited to spread the idea of STEM and FIRST to all visitors of all ages.
                   </p>
                 </div>
-                <div className="md:w-1/2 relative overflow-hidden">
+                <div className="md:w-1/2 relative overflow-hidden min-h-[300px]">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
-                    className="h-64 md:h-full min-h-[300px]"
-                    style={{
-                      backgroundImage: 'url("/images/commonroots1.jpg")',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  />
+                    className="h-full w-full relative"
+                  >
+                    <Image
+                      src="/images/commonroots1.jpg"
+                      alt="Common Roots Festival Outreach"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </motion.div>
                 </div>
               </div>
             </TiltCard>
@@ -219,10 +222,15 @@ export default function Home() {
                   whileHover={{ scale: 1.05, zIndex: 10 }}
                   className="relative aspect-square rounded-2xl overflow-hidden border border-[#372a2f] group"
                 >
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                    style={{ backgroundImage: `url("/images/${img}")` }}
-                  />
+                  <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
+                    <Image
+                      src={`/images/${img}`}
+                      alt="Robot Gallery Image"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
 
                   <motion.div
                     className="absolute inset-0 border-2 border-[#db3d7a] rounded-2xl opacity-0"
