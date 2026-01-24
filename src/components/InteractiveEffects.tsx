@@ -245,31 +245,37 @@ export function AnimatedCounter({ value, suffix = '', duration = 1.5 }: Animated
     const hasAnimated = useRef(false);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !hasAnimated.current) {
-                    hasAnimated.current = true;
-                    const steps = Math.min(value, 40); // Max 40 steps for performance
-                    const increment = value / steps;
-                    const stepDuration = (duration * 1000) / steps;
-                    let current = 0;
+        // Delay observer slightly to ensure layout is settled
+        const timer = setTimeout(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting && !hasAnimated.current) {
+                        hasAnimated.current = true;
+                        const steps = Math.min(value, 40); // Max 40 steps for performance
+                        const increment = value / steps;
+                        const stepDuration = (duration * 1000) / steps;
+                        let current = 0;
 
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= value) {
-                            setCount(value);
-                            clearInterval(timer);
-                        } else {
-                            setCount(Math.floor(current));
-                        }
-                    }, stepDuration);
-                }
-            },
-            { threshold: 0.5 }
-        );
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= value) {
+                                setCount(value);
+                                clearInterval(timer);
+                            } else {
+                                setCount(Math.floor(current));
+                            }
+                        }, stepDuration);
+                    }
+                },
+                { threshold: 0.3, rootMargin: '-10px' } // Slightly more forgiving threshold, but requires margin
+            );
 
-        if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
+            if (ref.current) observer.observe(ref.current);
+
+            return () => observer.disconnect();
+        }, 100);
+
+        return () => clearTimeout(timer);
     }, [value, duration]);
 
     return (

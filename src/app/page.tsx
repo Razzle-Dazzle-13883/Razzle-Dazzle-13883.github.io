@@ -223,7 +223,7 @@ export default function Home() {
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundImage: `url("/images/${img}")` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0a0b] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                   <motion.div
                     className="absolute inset-0 border-2 border-[#db3d7a] rounded-2xl opacity-0"
                     whileHover={{ opacity: 1 }}
