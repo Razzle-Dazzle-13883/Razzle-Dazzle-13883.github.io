@@ -52,6 +52,9 @@ export default function Footer() {
                     <p className="text-[#b79fa8] text-sm mt-2">
                         Website by <a href="https://arushw.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#db3d7a] hover:text-[#ff6b9d] transition-colors font-medium">Arush Wadhawan</a>
                     </p>
+                    <p className="text-[#b79fa8]/20 text-[10px] mt-1">
+                        Images and Text by Dash Duan
+                    </p>
                 </div>
             </div>
         </motion.footer>
