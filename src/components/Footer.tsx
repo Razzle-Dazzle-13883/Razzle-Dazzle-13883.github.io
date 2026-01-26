@@ -47,7 +47,7 @@ export default function Footer() {
                         </motion.a>
                     </div>
                     <p className="text-[#b79fa8] text-base font-normal leading-normal">
-                        © 2025 Razzle Dazzle. All rights reserved.
+                        © 2026 Razzle Dazzle. All rights reserved.
                     </p>
                     <p className="text-[#b79fa8] text-sm mt-2">
                         Website by <a href="https://arushw.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#db3d7a] hover:text-[#ff6b9d] transition-colors font-medium">Arush Wadhawan</a>
