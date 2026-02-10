@@ -56,7 +56,6 @@ export default function SponsorsPage() {
     ];
 
     const sponsorshipTiers = [
-        { name: 'Bronze', amount: '$100+', color: 'from-amber-700 to-amber-500', benefits: ['Logo on website', 'Social media shoutout'] },
         { name: 'Silver', amount: '$250+', color: 'from-gray-400 to-gray-300', benefits: ['Logo on website', 'Logo on team shirts', 'Social media feature'] },
         { name: 'Gold', amount: '$500+', color: 'from-yellow-500 to-yellow-400', benefits: ['All Silver benefits', 'Banner at events', 'Special recognition'] },
         { name: 'Platinum', amount: '$1000+', color: 'from-[#db3d7a] to-[#ff6b9d]', benefits: ['All Gold benefits', 'Featured sponsor status', 'Custom partnership'] },
@@ -147,8 +146,8 @@ export default function SponsorsPage() {
                         </span>
                     </h2>
                 </GlowReveal>
-                <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                    {sponsorshipTiers.map((tier, index) => (
+                <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                    {sponsorshipTiers.map((tier) => (
                         <StaggerItem key={tier.name}>
                             <motion.div
                                 whileHover={{ y: -5 }}
